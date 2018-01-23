@@ -3,7 +3,7 @@
   "display":{
     "displayedText":[
       "doc: put the list of text and string returning functions to create the text&lt;br/&gt;Example: &lt;br/&gt;",
-      "My player name",
+      playerChara.name,
       " is cornered at a ledge, the beast is leering; you must do something!&lt;br/&gt;&lt;br/&gt;"
     ],
     "isInDebug":false
