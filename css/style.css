@@ -1,0 +1,107 @@
+<!--  -->
+div.clr {
+  clear: both;
+}
+
+.mainDivF {
+  margin: auto;
+  height: 39em;
+  width: 50em;
+  border-style: solid;
+  border-color: #4080f0;
+  border-width: 0.5em;
+  border-radius: 0.75em;
+  background-color: #40a0ff;
+}
+
+div.mainDivStats {
+  float: left;
+  margin-left: 1em;
+  margin-top: 1em;
+  height: 26em;
+  width: 10em;
+  background-color: #fff;
+  border-style: solid;
+  border-color: #f0f0f0;
+  border-width: 0.25em;
+  border-radius: 0.375em;
+}
+
+.mainDivDisplay {
+  float: left;
+  margin-left: 1.5em;
+  margin-top: 1em;
+  height: 26em;
+  width: 35.5em;
+  background-color: #fff;
+  border-style: solid;
+  border-color: #f0f0f0;
+  border-width: 0.25em;
+  border-radius: 0.375em;
+}
+
+.wfio {
+  float: left;
+  margin-left: 1em;
+  margin-top: 1.5em;
+  height: 8.5em;
+  width: 10em;
+  background-color: #fff;
+  border-style: solid;
+  border-color: #f0f0f0;
+  border-width: 0.25em;
+  border-radius: 0.375em;
+
+}
+
+.mainDivControlPanel {
+  float: left;
+  margin-left: 1.5em;
+  margin-top: 1.5em;
+  height: 8.5em;
+  width: 35.5em;
+  background-color: #fff;
+  border-style: solid;
+  border-color: #f0f0f0;
+  border-width: 0.25em;
+  border-radius: 0.375em;
+}
+
+.btntxt {
+  font-size: 1.325em;
+  font-family: 'Crimson Text';
+}
+
+.primaryButton {
+  width:6em;
+  height:3em;
+  margin-left:0.55em;
+  background-color:#4080f0;
+  border-style:solid;
+  border-color:#40a0ff;
+  border-width:0.3em;
+  border-radius:.2em;
+  
+}
+.primaryButtonHolder {
+  width:6em;
+  height:4em;
+  padding-left:0.55em;
+  padding-right:0.55em;
+  
+  
+}
+.stat {
+  background-color: inherit;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+  height: 1.5em;
+  width: 9em;
+}
+button[disabled] {
+  background-color:#8583ba;
+  border-color:#a0a0cf;
+}
+button[disabled] > span {
+  color:#282828;
+}
