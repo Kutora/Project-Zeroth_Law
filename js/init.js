@@ -1,63 +1,18 @@
-playerChara = {};
-  playerChara.stats = {};
-    playerChara.stats.str = {};
-      playerChara.stats.str.value = 10;
-      playerChara.stats.str.effValue = 10; //effective value
-      playerChara.stats.str.maxValue = 100;
-      playerChara.stats.str.minValue = 1;
-
-    playerChara.stats.spd = {};
-      playerChara.stats.spd.value = 10;
-      playerChara.stats.spd.effValue = 10; //effective value
-      playerChara.stats.spd.maxValue = 100;
-      playerChara.stats.spd.minValue = 1;
-
-    playerChara.stats.end = {};
-      playerChara.stats.end.value = 10;
-      playerChara.stats.end.effValue = 10; //effective value
-      playerChara.stats.end.maxValue = 100;
-      playerChara.stats.end.minValue = 1;
-
-    playerChara.stats.int = {};
-      playerChara.stats.int.value = 10;
-      playerChara.stats.int.effValue = 10; //effective value
-      playerChara.stats.int.maxValue =100;
-      playerChara.stats.int.minValue = 1;
-
-    playerChara.stats.ctr = {};
-      playerChara.stats.ctr.value = 10;
-      playerChara.stats.ctr.effValue = 10; //effective value
-      playerChara.stats.ctr.maxValue = 100;
-      playerChara.stats.ctr.minValue = 1;
-  playerChara.name = "My player name";
-
-  playerChara.body = {};
-    playerChara.body.torso = {};
-      playerChara.body.torso.fur = "none";
-      playerChara.body.torso.skinFurColor = "light";
-      
-    playerChara.body.head = {};
-      playerChara.body.head.ears = "human";
-      playerChara.body.head.eyes = {};
-        playerChara.body.head.eyes.irisColor = "brown";
-        playerChara.body.head.eyes.pupilShape = "normal";
-
-      playerChara.body.head.hair = {};
-        playerChara.body.head.hair.color = "brown";
-        playerChara.body.head.hair.length = 4; //measured with inches
-        playerChara.body.head.hair.wavieness = 0;
-        playerChara.body.head.hair.thickness = 1;
-
-    playerChara.body.legs = {};
-    playerChara.body.arms = {};
-  
-  playerChara.spaceCraft ={};
-    playerChara.spaceCraft.shipClass = 0;//0 is a light scout/personal-transport vehical
-playerChara.spaceCraft.engine = [{name:"EM Drive Array",type:'Thruster', typeid:1}];
-
-function getDOM(elementQueried) {
-  return document.querySelector(elementQueried);
+function retResponse(address)
+{
+  var requ = new XMLHttpRequest();
+  requ.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    return = this.responseText;
+    xhttp.open("GET", address ,true );
+    xhttp.send();
+    }
 }
+playerChara = 
+
+/*function getDOM(elementQueried) {
+  return document.querySelector(elementQueried);
+}*/
 function updateStat(statAbbreviation)
 {
   switch(statAbbreviation)
