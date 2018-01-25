@@ -1,0 +1,70 @@
+{
+  "stats":{
+    "str":{
+      "value":10,
+      "effValue":10,
+      "maxValue":100,
+      "minValue":1
+    },
+    "spd":{
+      "value":10,
+      "effValue":10,
+      "maxValue":100,
+      "minValue":1
+    },
+    "end":{
+      "value":10,
+      "effValue":10,
+      "maxValue":100,
+      "minValue":1
+    },
+    "int":{
+      "value":10,
+      "effValue":10,
+      "maxValue":100,
+      "minValue":1
+    },
+    "ctr":{
+      "value":10,
+      "effValue":10,
+      "maxValue":100,
+      "minValue":1
+    }
+  },
+  "name":"My player name",
+  "body":{
+    "torso":{
+      "fur":"none",
+      "skinFurColor":"light"
+    },
+    "head":{
+      "ears":"human",
+      "eyes":{
+        "irisColor":"brown",
+        "pupilShape":"normal"
+      },
+      "hair":{
+        "color":"brown",
+        "length":4,
+        "wavieness":0,
+        "thickness":1
+      }
+    },
+    "legs":{
+
+    },
+    "arms":{
+
+    }
+  },
+  "spaceCraft":{
+    "shipClass":0,
+    "engine":[
+      {
+        "name":"EM Drive Array",
+        "type":"Thruster",
+        "typeid":1
+      }
+    ]
+  }
+}
