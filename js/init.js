@@ -8,7 +8,7 @@ function retResponse(address)
     xhttp.send();
     }
 }
-playerChara = retResponse("js/defaultPC_data.json");
+playerChara = retResponse("https://kutora.github.io/Project-Zeroth_Law/js/init.js");
 
 /*function getDOM(elementQueried) {
   return document.querySelector(elementQueried);
