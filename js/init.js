@@ -8,7 +8,7 @@ function retResponse(address)
     xhttp.send();
     }
 }
-playerChara = retResponse("js/defaultPC_data.json");
+playerChara = retResponse("/js/defaultPC_data.json");
 
 /*function getDOM(elementQueried) {
   return document.querySelector(elementQueried);
