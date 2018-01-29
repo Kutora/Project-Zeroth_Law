@@ -1,14 +1,16 @@
-function retResponse(address)
-{
-  var requ = new XMLHttpRequest();
-  requ.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-    return = this.responseText;
-    xhttp.open("GET", address ,true );
-    xhttp.send();
-    }
-}
-playerChara = retResponse("https://kutora.github.io/Project-Zeroth_Law/js/init.js");
+/*function httpRequest(address, asyncProc) {
+   var r = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+   if (asyncProc) 
+      r.onreadystatechange = function () { 
+          if (this.readyState == 4) asyncProc(this); 
+      }; 
+   else 
+      r.timeout = 4000;  // Reduce default 2mn-like timeout to 4 s if synchronous
+   r.open(address, !(!asyncProc));
+   r.send();
+   return r;
+}*/
+//playerChara = retResponse("https://kutora.github.io/Project-Zeroth_Law/js/init.js");
 
 /*function getDOM(elementQueried) {
   return document.querySelector(elementQueried);
