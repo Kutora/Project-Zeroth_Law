@@ -1,4 +1,4 @@
-/*function httpRequest(address, asyncProc) {
+function httpRequest(address, asyncProc) {
    var r = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
    if (asyncProc) 
       r.onreadystatechange = function () { 
@@ -9,8 +9,8 @@
    r.open(address, !(!asyncProc));
    r.send();
    return r;
-}*/
-//playerChara = retResponse("https://kutora.github.io/Project-Zeroth_Law/js/init.js");
+}
+playerChara = httpRequest("https://kutora.github.io/Project-Zeroth_Law/js/init.js", true);
 
 /*function getDOM(elementQueried) {
   return document.querySelector(elementQueried);
