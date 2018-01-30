@@ -6,14 +6,14 @@ function httpRequest(address, assignmentName)
    req.onreadystatechange = function () { 
        if (this.readyState == 4)
        {
-          responseArray[assignmentName] = this.textResponse;
+          responseArray[assignmentName] = this.responseText;
        }
    };
    req.open(address, true);
    req.send();
    
 }
-httpRequest("https://kutora.github.io/Project-Zeroth_Law/js/init.js", "playerChara");
+httpRequest("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json", "playerChara");
 while(responseArray.playerChara === null)
 { 
    
