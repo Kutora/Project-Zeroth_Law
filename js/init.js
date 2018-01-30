@@ -2,7 +2,7 @@ var responseArray = {};
 function httpRequest(address, assignmentName) 
 {
    var req = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-   responseArray[assignmentName] =null;
+   responseArray[assignmentName] = null;
    req.onreadystatechange = function () { 
        if (this.readyState == 4)
        {
@@ -13,11 +13,12 @@ function httpRequest(address, assignmentName)
    req.send();
    while(!responseArray[assignmentName])
    {
-      //TODO
+      void();
    }
+   return this.textResponse
 }
 
-playerChara = httpRequest("https://kutora.github.io/Project-Zeroth_Law/js/init.js", true);
+playerChara = httpRequest("https://kutora.github.io/Project-Zeroth_Law/js/init.js", playerChara);
 
 /*function getDOM(elementQueried) {
   return document.querySelector(elementQueried);
