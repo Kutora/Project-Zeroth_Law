@@ -12,9 +12,7 @@ function httpRequest(address, assignmentName)
    req.open(address, !(!asyncProc));
    req.send();
    while(!responseArray[assignmentName])
-   {
-      void();
-   }
+   { }
    return this.textResponse
 }
 
