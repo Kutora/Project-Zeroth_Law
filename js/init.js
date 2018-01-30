@@ -1,15 +1,22 @@
-function httpRequest(address, asyncProc) {
-   var r = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-   if (asyncProc) 
-      r.onreadystatechange = function () { 
-          if (this.readyState == 4) asyncProc(this); 
-      }; 
-   else 
-      r.timeout = 4000;  // Reduce default 2mn-like timeout to 4 s if synchronous
-   r.open(address, !(!asyncProc));
-   r.send();
-   return r;
+var responseArray = {};
+function httpRequest(address, assignmentName) 
+{
+   var req = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+   responseArray[assignmentName] =null;
+   req.onreadystatechange = function () { 
+       if (this.readyState == 4)
+       {
+          responseArray[assignmentName] = this.textResponse;
+       }
+   };
+   req.open(address, !(!asyncProc));
+   req.send();
+   while(!responseArray[assignmentName])
+   {
+      //TODO
+   }
 }
+
 playerChara = httpRequest("https://kutora.github.io/Project-Zeroth_Law/js/init.js", true);
 
 /*function getDOM(elementQueried) {
