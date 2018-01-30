@@ -18,7 +18,7 @@ while(responseArray.playerChara === null)
 { 
    
 }
-playerChara = responseArray[assignmentName]
+playerChara = JSON.parse(responseArray.playerChara);
 
 /*function getDOM(elementQueried) {
   return document.querySelector(elementQueried);
