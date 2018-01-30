@@ -11,7 +11,7 @@ function httpRequest(address, assignmentName)
    };
    req.open(address, !(!asyncProc));
    req.send();
-   while(!responseArray[assignmentName])
+   while(responseArray[assignmentName] === null)
    { }
    return this.textResponse
 }
