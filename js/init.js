@@ -9,14 +9,16 @@ function httpRequest(address, assignmentName)
           responseArray[assignmentName] = this.textResponse;
        }
    };
-   req.open(address, !(!asyncProc));
+   req.open(address, true));
    req.send();
-   while(responseArray[assignmentName] === null)
-   { }
-   return this.textResponse
+   
 }
-
-playerChara = httpRequest("https://kutora.github.io/Project-Zeroth_Law/js/init.js", playerChara);
+httpRequest("https://kutora.github.io/Project-Zeroth_Law/js/init.js", "playerChara");
+while(responseArray.playerChara === null)
+{ 
+   
+}
+playerChara = responseArray[assignmentName]
 
 /*function getDOM(elementQueried) {
   return document.querySelector(elementQueried);
