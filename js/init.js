@@ -9,7 +9,7 @@ function httpRequest(address, assignmentName)
           responseArray[assignmentName] = this.textResponse;
        }
    };
-   req.open(address, true));
+   req.open(address, true);
    req.send();
    
 }
