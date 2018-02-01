@@ -15,7 +15,7 @@ function httpRequest(address, assignmentName)
    
 }
 httpRequest("GET","js/defaultPC_data.json", "playerChara");
-while(responseArray.playerChara === null)
+while(responseArray.playerChara == null) //|| responseArray.playerChara === undefined)
 {
    
 }
