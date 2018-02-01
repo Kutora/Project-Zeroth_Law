@@ -7,15 +7,16 @@ function httpRequest(address, assignmentName)
        if (this.readyState == 4)
        {
           responseArray[assignmentName] = this.responseText;
+          
        }
    };
    req.open(address, true);
    req.send();
    
 }
-httpRequest("js/defaultPC_data.json", "playerChara");
+httpRequest("GET","js/defaultPC_data.json", "playerChara");
 while(responseArray.playerChara === null)
-{ 
+{
    
 }
 playerChara = JSON.parse(responseArray.playerChara);
@@ -26,7 +27,7 @@ playerChara = JSON.parse(responseArray.playerChara);
 function updateStat(statAbbreviation)
 {
   switch(statAbbreviation)
-    {
+    { 
       case "str" : getDOM("#strText").innerHTML = playerChara.stats.str.value;break;
       case "spd" : getDOM("#spdText").innerHTML = playerChara.stats.spd.value;break;
       case "end" : getDOM("#endText").innerHTML = playerChara.stats.end.value;break;
