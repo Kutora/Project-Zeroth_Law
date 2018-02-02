@@ -21,9 +21,9 @@ httpRequest("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json"
 
 playerChara = JSON.parse(responseArray.playerChara);
 
-/*function getDOM(elementQueried) {
+  function getDOM(elementQueried) {
   return document.querySelector(elementQueried);
-}*/
+
 function updateStat(statAbbreviation)
 {
   switch(statAbbreviation)
