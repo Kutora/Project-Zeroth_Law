@@ -4,6 +4,7 @@ function httpRequest(address, assignmentName)
    var req = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
    responseArray[assignmentName] = null;
    req.onreadystatechange = function () { 
+       console.log(this.readyState);
        if (this.readyState == 4)
        {
           responseArray[assignmentName] = this.responseText;
