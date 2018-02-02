@@ -15,10 +15,10 @@ function httpRequest(address, assignmentName)
    req.send();
    
 }
+
+httpRequest("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json", "playerChara");
 function cont()
 {
-httpRequest("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json", "playerChara");
-
 playerChara = JSON.parse(responseArray.playerChara);
 
   function getDOM(elementQueried) {
