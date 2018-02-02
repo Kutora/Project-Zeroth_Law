@@ -7,18 +7,17 @@ function httpRequest(address, assignmentName)
        if (this.readyState == 4)
        {
           responseArray[assignmentName] = this.responseText;
-          
+          cont();
        }
    };
    req.open(address, true);
    req.send();
    
 }
-httpRequest("GET","https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json", "playerChara");
-while(responseArray.playerChara == null) //|| responseArray.playerChara === undefined)
+function cont()
 {
-   
-}
+httpRequest("GET","https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json", "playerChara");
+
 playerChara = JSON.parse(responseArray.playerChara);
 
 /*function getDOM(elementQueried) {
@@ -232,3 +231,4 @@ window.addEventListener("keydown" , function(event)
       scene.display.isInDebug = !scene.display.isInDebug;
     }
 }, false);
+}
