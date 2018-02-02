@@ -14,7 +14,7 @@ function httpRequest(address, assignmentName)
    req.send();
    
 }
-httpRequest("GET","js/defaultPC_data.json", "playerChara");
+httpRequest("GET","https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json", "playerChara");
 while(responseArray.playerChara == null) //|| responseArray.playerChara === undefined)
 {
    
