@@ -11,13 +11,13 @@ function httpRequest(address, assignmentName)
           cont();
        }
    };
-   req.open(address, true);
+   req.open("GET",address, true);
    req.send();
    
 }
 function cont()
 {
-httpRequest("GET","https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json", "playerChara");
+httpRequest("https://raw.githubusercontent.com/Kutora/Project-Zeroth_Law/master/js/defaultPC_data.json", "playerChara");
 
 playerChara = JSON.parse(responseArray.playerChara);
 
