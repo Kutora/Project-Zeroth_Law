@@ -16,8 +16,8 @@ function httpRequest(address)
 }
 
 var deletThis = void async function () {
-var data = httpRequest("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
-playerChara = JSON.parse();
+var data = await httpRequest("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
+playerChara = JSON.parse(data);
 }
 function getDOM(elementQueried) {
 return document.querySelector(elementQueried);
