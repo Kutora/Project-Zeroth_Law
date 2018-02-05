@@ -202,7 +202,8 @@ function updateBtns()
 document.getElementById("sceneDisplay").innerHTML = concatDisplayText();
 
 updateBtns();
-window.addEventListener("keydown" , function(event)
+window.addEventListener("keydown" , 
+function(event)
 {
   //window.alert("Key is: " + event.keyCode);
   if(event.keyCode == 190)
@@ -232,4 +233,3 @@ window.addEventListener("keydown" , function(event)
       scene.display.isInDebug = !scene.display.isInDebug;
     }
 }, false);
-}
