@@ -1,5 +1,5 @@
-var responseArray = {};
-function httpRequest(address, assignmentName) 
+
+function httpRequest(address) 
 {
    var req = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
    responseArray[assignmentName] = null;
@@ -7,8 +7,7 @@ function httpRequest(address, assignmentName)
        console.log(this.readyState);
        if (this.readyState == 4)
        {
-          responseArray[assignmentName] = this.responseText;
-          cont();
+           return this.responseText;
        }
    };
    req.open("GET",address, true);
@@ -16,14 +15,14 @@ function httpRequest(address, assignmentName)
    
 }
 
-httpRequest("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json", "playerChara");
-function cont()
-{
-playerChara = JSON.parse(responseArray.playerChara);
 
-  function getDOM(elementQueried) {
-  return document.querySelector(elementQueried);
-
+async function() {
+  
+playerChara = JSON.parse();
+}
+function getDOM(elementQueried) {
+return document.querySelector(elementQueried);
+}
 function updateStat(statAbbreviation)
 {
   switch(statAbbreviation)
