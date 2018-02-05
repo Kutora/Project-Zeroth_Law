@@ -15,8 +15,7 @@ function httpRequest(address)
    
 }
 
-
-async function() {
+var deletThis = void async function () {
 var data = httpRequest("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
 playerChara = JSON.parse();
 }
