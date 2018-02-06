@@ -1,5 +1,5 @@
 
-function httpRequest(address) 
+/*function httpRequest(address) 
 {
    var req = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
    responseArray[assignmentName] = null;
@@ -12,13 +12,17 @@ function httpRequest(address)
    };
    req.open("GET",address, true);
    req.send();
-   
+}*/
+
+async function getData(url) 
+{
+    const promise = await fetch(url);
+    const data = await promise;
+return data;
 }
 
-var deletThis = void async function () {
-var data = await httpRequest("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
-playerChara = JSON.parse(data);
-}
+playerChara = getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
+
 function getDOM(elementQueried) {
 return document.querySelector(elementQueried);
 }
