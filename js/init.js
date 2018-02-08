@@ -21,7 +21,7 @@ async function getData(url)
 return data;
 }
 
-playerChara = JSON.parse()getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json"));
+playerChara = JSON.parse(getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json"));
 
 setTimeout(function() {}, 5000)
 function getDOM(elementQueried) {
