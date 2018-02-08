@@ -16,7 +16,13 @@
 
 async function getData(url) 
 {
-    const promise = await fetch(url);
+   
+    const promise = await fetch(url, 
+             { method: 'GET',
+               headers: {"Content-Type": "text/plain"},
+               mode: 'cors',
+               cache: 'default' }
+               );
     const data = await promise;
 return data;
 }
