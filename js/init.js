@@ -31,6 +31,7 @@ async function workAround()
    await tdata =getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json")
    playerChara = JSON.parse(tdata);
 }
+workAround();
 setTimeout(function() {}, 5000)
 function getDOM(elementQueried) {
 return document.querySelector(elementQueried);
