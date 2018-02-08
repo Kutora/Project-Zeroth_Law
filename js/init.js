@@ -28,7 +28,7 @@ return data;
 }
 async function workAround()
 {
-   await tdata = getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
+   tdata = await getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
    playerChara = JSON.parse(tdata);
 }
 workAround();
