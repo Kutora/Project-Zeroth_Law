@@ -22,13 +22,15 @@ async function getData(url)
                headers: {"Content-Type": "text/plain"},
                mode: 'cors',
                cache: 'default' }
-               );
+    );
     const data = await promise;
 return data;
 }
-
-playerChara = JSON.parse(getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json"));
-
+async function workAround()
+{
+   await tdata =getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json")
+   playerChara = JSON.parse(tdata);
+}
 setTimeout(function() {}, 5000)
 function getDOM(elementQueried) {
 return document.querySelector(elementQueried);
