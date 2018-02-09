@@ -30,7 +30,7 @@ function waitForData(globalSubject="playerChara")
 {
   if(window[globalSubject] == null)
   {
-     setTimeout(waitForData(globalSubject), 5000);
+     setTimeout(function(){waitForData(globalSubject);}, 10000);
   }
 }
 waitForData();
