@@ -13,7 +13,7 @@
    req.open("GET",address, true);
    req.send();
 }*/
-window.playerChara=null;
+window.playerChara = undefined;
 async function getData(url) 
 {
    
