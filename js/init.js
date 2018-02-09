@@ -13,7 +13,7 @@
    req.open("GET",address, true);
    req.send();
 }*/
-
+window.playerChara=null;
 async function getData(url) 
 {
    
@@ -26,13 +26,17 @@ async function getData(url)
     const data = await promise;
 return data;
 }
-async function workAround()
+function waitForData(globalSubject="playerChara") 
 {
-   tdata = await getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
-   playerChara = JSON.parse(tdata);
+  if(window[globalSubject] == null)
+  {
+     setTimeout(waitForData(globalSubject), 5000);
+  }
 }
+waitForData();
+window.playerChara = JSON.parse(getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json") );
 workAround();
-setTimeout(function() {}, 5000)
+
 function getDOM(elementQueried) {
 return document.querySelector(elementQueried);
 }
