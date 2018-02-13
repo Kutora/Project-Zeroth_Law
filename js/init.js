@@ -25,7 +25,7 @@ async function getData(url)
     );
     const data = await promise;
     console.log(data);
-    return data;
+    return data.text;
 }
 function waitForData(globalSubject="playerChara") 
 {
@@ -34,10 +34,9 @@ function waitForData(globalSubject="playerChara")
      setTimeout(function(){waitForData(globalSubject);}, 10000);
   }
 }
-waitForData();
-window.playerChara = JSON.parse(getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json") );
-workAround();
 
+window.playerChara = JSON.parse(getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json")
+waitForData();
 function getDOM(elementQueried) {
 return document.querySelector(elementQueried);
 }
