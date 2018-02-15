@@ -35,7 +35,7 @@ function waitForData(globalSubject="playerChara")
   }
 }
 
-window.playerChara = JSON.parse(getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json"));
+window.playerChara = getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
 waitForData();
 function getDOM(elementQueried) {
 return document.querySelector(elementQueried);
