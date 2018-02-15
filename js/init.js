@@ -14,28 +14,41 @@
    req.send();
 }*/
 window.playerChara = undefined;
-async function getData(url) 
+async function dataGrab(url, globalSubject="playerChara")
 {
-   
-    const promise = await fetch(url, 
-             { method: 'GET',
-               headers: {"Content-Type": "text/plain"},
-               mode: 'cors',
-               cache: 'default' }
-    );
-    const data = await promise;
-    //console.log(data.text());
-    data.json().then(function(dat){return dat});
-}
-function waitForData(globalSubject="playerChara") 
-{
-  if(window[globalSubject] == null || false)
-  {
-     setTimeout(function(){waitForData(globalSubject);}, 10000);
-  }
-}
+   var pr;
+   async function getData(url) 
+   {
 
-window.playerChara = getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
+       const promise = await fetch(url, 
+                { method: 'GET',
+                  headers: {"Content-Type": "text/plain"},
+                  mode: 'cors',
+                  cache: 'default' }
+       );
+       const data = await promise;
+       //console.log(data.text());
+       pr = data.json();
+   }
+   function waitForData() 
+   {
+     if(pr == null || false)
+     {
+        setTimeout(function(){waitForData(globalSubject);}, 10000);
+     }
+     else
+     {
+        pr.then(prDone)
+     }
+   }
+   function prDone(ndata)
+   {
+      window[globalSubject] = ndata;
+   }
+   getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
+   
+}
+getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json").then;
 waitForData();
 function getDOM(elementQueried) {
 return document.querySelector(elementQueried);
