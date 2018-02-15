@@ -13,24 +13,9 @@
    req.open("GET",address, true);
    req.send();
 }*/
-window.playerChara = undefined;
-async function dataGrab(url, globalSubject="playerChara")
-{
-   var pr;
-   async function getData(url) 
-   {
 
-       const promise = await fetch(url, 
-                { method: 'GET',
-                  headers: {"Content-Type": "text/plain"},
-                  mode: 'cors',
-                  cache: 'default' }
-       );
-       const data = await promise;
-       //console.log(data.text());
-       pr = data.json();
-   }
-   function waitForData() 
+window.playerChara = undefined;
+function waitForData() 
    {
      if(pr == null || false)
      {
@@ -41,6 +26,23 @@ async function dataGrab(url, globalSubject="playerChara")
         pr.then(prDone)
      }
    }
+async function getData(url) 
+   {
+
+       const promise = await fetch(url, 
+                { method: 'GET',
+                  headers: {"Content-Type": "text/plain"},
+                  mode: 'cors',
+                  cache: 'default' }
+       );
+       const data = await promise;
+       //console.log(data.text());
+       return data.json();
+   }
+async function dataGrab(url, globalSubject="playerChara")
+{
+   
+   
    function prDone(ndata)
    {
       window[globalSubject] = ndata;
