@@ -24,8 +24,8 @@ async function getData(url)
                cache: 'default' }
     );
     const data = await promise;
-    console.log(data.text());
-    return data.text();
+    //console.log(data.text());
+    return data.json();
 }
 function waitForData(globalSubject="playerChara") 
 {
