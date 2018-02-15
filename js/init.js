@@ -27,7 +27,7 @@ async function getData(url)
     //console.log(data.text());
     data.json().then(function(data) {
   return data
-});;
+});
 }
 function waitForData(globalSubject="playerChara") 
 {
