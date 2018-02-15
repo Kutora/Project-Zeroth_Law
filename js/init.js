@@ -29,7 +29,7 @@ async function getData(url)
 }
 function waitForData(globalSubject="playerChara") 
 {
-  if(window[globalSubject] == null || window[globalSubject] == [object Promise])
+  if(window[globalSubject] == null || false)
   {
      setTimeout(function(){waitForData(globalSubject);}, 10000);
   }
