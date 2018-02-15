@@ -15,6 +15,12 @@
 }*/
 
 window.playerChara = undefined;
+function prDone(ndata)
+   {
+      window[globalSubject] = ndata;
+   }
+
+
 function waitForData() 
    {
      if(pr == null || false)
@@ -26,6 +32,8 @@ function waitForData()
         pr.then(prDone)
      }
    }
+
+
 async function getData(url) 
    {
 
@@ -39,14 +47,10 @@ async function getData(url)
        //console.log(data.text());
        return data.json();
    }
+
+
 async function dataGrab(url, globalSubject="playerChara")
-{
-   
-   
-   function prDone(ndata)
-   {
-      window[globalSubject] = ndata;
-   }
+
    getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
    
 }
