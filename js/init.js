@@ -25,9 +25,7 @@ async function getData(url)
     );
     const data = await promise;
     //console.log(data.text());
-    data.json().then(function(data) {
-  return data
-});
+    data.json().then(function(dat){return dat});
 }
 function waitForData(globalSubject="playerChara") 
 {
