@@ -21,7 +21,7 @@ function prDone(ndata)
    }
 
 
-function waitForData() 
+function waitForData(pr) 
    {
      if(pr == null || false)
      {
@@ -51,8 +51,8 @@ async function getData(url)
 
 async function dataGrab(url, globalSubject="playerChara")
 {
-   getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
-   return waitForData();
+   
+   return waitForData(getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json"));
 }
 dataGrab("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json").then;
 //waitForData();
