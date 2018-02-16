@@ -13,11 +13,11 @@
    req.open("GET",address, true);
    req.send();
 }*/
-
+window.passer = false;
 window.playerChara = undefined;
 function prDone(ndata)
    {
-      return ndata;
+      window.passer = ndata;
    }
 
 
@@ -25,11 +25,25 @@ function waitForData(pr)
    {
      if(pr == null || false)
      {
-        setTimeout(function(){waitForData(globalSubject);}, 10000);
+        var temp2 = setTimeout(function(){waitForData(pr);}, 10000);
+        console.log(temp2);
+        //return temp2;
      }
      else
      {
-        return pr.then(prDone)
+        pr.then(prDone)
+        if(window.passer)
+        {
+           var temp1 = window.passer;
+           window.passer = false;
+           return temp1;
+        }
+        else
+        {
+           var temp2 =setTimeout(function(){waitForData(pr);}, 10000);
+           console.log(temp2);
+           //return temp2;
+           
      }
    }
 
