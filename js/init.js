@@ -52,10 +52,10 @@ async function getData(url)
 async function dataGrab(url, globalSubject="playerChara")
 {
    getData("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
-   return function waitForData();
+   return waitForData();
 }
 dataGrab("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json").then;
-waitForData();
+//waitForData();
 function getDOM(elementQueried) {
 return document.querySelector(elementQueried);
 }
