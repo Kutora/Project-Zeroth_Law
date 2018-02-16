@@ -43,7 +43,7 @@ function waitForData(pr)
            var temp2 =setTimeout(function(){waitForData(pr);}, 10000);
            console.log(temp2);
            //return temp2;
-           
+        }
      }
    }
 
