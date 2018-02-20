@@ -21,7 +21,7 @@ function prDone(ndata)
    }
 
 
-function waitForData(pr) 
+function waitForData(prn)//make prn reference an array to get the promise
    {
      if(pr == null || false)
      {
@@ -31,7 +31,7 @@ function waitForData(pr)
      }
      else
      {
-        pr.then(prDone, )
+        prn.then(prDone, )
         if(window.passer)
         {
            var temp1 = window.passer;
@@ -40,7 +40,7 @@ function waitForData(pr)
         }
         else
         {
-           var temp2 = setTimeout(function(){waitForData(pr);}, 10000);
+           var temp2 = setTimeout(function(){waitForData(prn);}, 10000);
            console.log(temp2);
            //return temp2;
         }
@@ -120,8 +120,8 @@ scene = {};
 scene.doc = "the object for all things scene";
 scene.display = {};
 scene.display.displayedText = [];
-scene.display.displayedText[0] = "doc: put the list of text and string returning functions to create the text<br/>Example: <br/>";
-scene.display.displayedText[1] = playerChara.name;
+scene.display.displayedText[0] = "doc: put the list of text and string returning functions to create the text<br/>Example: <br/>$playerChara.name";
+scene.display.displayedText[1] = ;
 scene.display.displayedText[2] = " is cornered at a ledge, the beast is leering; you must do something!<br/><br/>";
 scene.display.isInDebug = false;
 scene.buttons = {};
