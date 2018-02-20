@@ -31,7 +31,7 @@ function waitForData(pr)
      }
      else
      {
-        pr.then(prDone)
+        pr.then(prDone, )
         if(window.passer)
         {
            var temp1 = window.passer;
@@ -40,7 +40,7 @@ function waitForData(pr)
         }
         else
         {
-           var temp2 =setTimeout(function(){waitForData(pr);}, 10000);
+           var temp2 = setTimeout(function(){waitForData(pr);}, 10000);
            console.log(temp2);
            //return temp2;
         }
@@ -65,8 +65,8 @@ async function getData(url)
 
 async function dataGrab(url, globalSubject="playerChara")
 {
-   
-   return waitForData(getData(url));
+   void waitForData(getData(url));
+   return window.passer
 }
 
 window.playerChara = dataGrab("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
