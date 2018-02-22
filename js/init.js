@@ -13,6 +13,7 @@
    req.open("GET",address, true);
    req.send();
 }*/
+window.prA[] =[ [null,null], [null,null], [null,null], [null,null], [null,null] ];
 window.passer = false;
 window.playerChara = undefined;
 function prDone(ndata)
