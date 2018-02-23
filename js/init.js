@@ -13,7 +13,7 @@
    req.open("GET",address, true);
    req.send();
 }*/
-window.prA[] =[ [null,null], [null,null], [null,null], [null,null], [null,null] ];
+window.pr =[ [null,null], [null,null], [null,null], [null,null], [null,null] ];
 window.passer = false;
 window.playerChara = undefined;
 function prDone(ndata)
@@ -66,7 +66,13 @@ async function getData(url)
 
 async function dataGrab(url, globalSubject="playerChara")
 {
-   void waitForData(getData(url));
+   var prn
+   for(var i=0; )
+   {
+      i[1] = null;
+      prn = 
+   }
+   void waitForData(prn);
    return window.passer
 }
 
