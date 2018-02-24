@@ -16,64 +16,68 @@
 window.pr =[ [null,null], [null,null], [null,null], [null,null], [null,null] ];
 window.passer = false;
 window.playerChara = undefined;
-function prDone(ndata)
-   {
-      window.passer = ndata;
-   }
 
 
-function waitForData(prn)//make prn reference an array to get the promise
+function waitForData(prn)
    {
-     if(pr == null || false)
+     if(pr[prn][2] == null || pr[prn][2] ==false))
      {
-        var temp2 = setTimeout(function(){waitForData(pr);}, 10000);
-        console.log(temp2);
-        //return temp2;
+        setTimeout(function(){waitForData(prn);}, 10000);
+        
      }
      else
      {
-        prn.then(prDone, )
-        if(window.passer)
+        
+        if(pr[prn][2] == null || pr[prn][2] ==false)
         {
-           var temp1 = window.passer;
-           window.passer = false;
-           return temp1;
+           
+           return true;
         }
         else
         {
-           var temp2 = setTimeout(function(){waitForData(prn);}, 10000);
+           var temp2 = setTimeout(function(){waitForData(prn);}, 1000);
            console.log(temp2);
-           //return temp2;
+           
         }
      }
    }
 
 
-async function getData(url) 
+async function getData(url,prn) 
    {
 
-       const promise = await fetch(url, 
+       pr[prn][1] = await fetch(url, 
                 { method: 'GET',
                   headers: {"Content-Type": "text/plain"},
                   mode: 'cors',
                   cache: 'default' }
-       );
+       ).then(function(response)
+           {
+               return response.json();
+           }).then(function(data)
+           {
+               pr[prn][2] = data;
+           });
        const data = await promise;
-       //console.log(data.text());
-       return data.json();
+       
+       return true;
    }
 
 
-async function dataGrab(url, globalSubject="playerChara")
+function dataGrab(url)
 {
    var prn
-   for(var i=0; )
+   for(var i=0; i<pr.length )
    {
-      i[1] = null;
-      prn = 
+      if(pr[i][1] == null)
+      {
+         prn = i;
+         break;
+      }
    }
-   void waitForData(prn);
-   return window.passer
+   getData(url,prn)
+   waitForData(prn);
+   return pr[prn][2]
 }
 
 window.playerChara = dataGrab("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
