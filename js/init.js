@@ -67,7 +67,7 @@ async function getData(url,prn)
 function dataGrab(url)
 {
    var prn
-   for(var i=0; i<pr.length )
+   for(var i=0; i<pr.length;i++ )
    {
       if(pr[i][1] == null)
       {
