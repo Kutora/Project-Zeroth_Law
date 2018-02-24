@@ -57,9 +57,7 @@ async function getData(url,prn)
            }).then(function(data)
            {
                pr[prn][2] = data;
-           });
-       const data = await promise;
-       
+           });       
        return true;
    }
 
