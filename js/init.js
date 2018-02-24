@@ -20,7 +20,7 @@ window.playerChara = undefined;
 
 function waitForData(prn)
    {
-     if(pr[prn][2] == null || pr[prn][2] ==false))
+     if(pr[prn][2] == null || pr[prn][2] ==false)
      {
         setTimeout(function(){waitForData(prn);}, 10000);
         
