@@ -13,7 +13,7 @@
    req.open("GET",address, true);
    req.send();
 }*/
-window.pr =[ [null,null], [null,null], [null,null], [null,null], [null,null] ];
+var pr =[ [null,null], [null,null], [null,null], [null,null], [null,null] ];
 window.passer = false;
 window.playerChara = undefined;
 
