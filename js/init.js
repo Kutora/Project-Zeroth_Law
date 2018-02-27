@@ -27,18 +27,7 @@ function waitForData(prn)
      }
      else
      {
-        
-        if(pr[prn][2] == null || pr[prn][2] ==false)
-        {
-           
-           return true;
-        }
-        else
-        {
-           var temp2 = setTimeout(function(){waitForData(prn);}, 1000);
-           console.log(temp2);
-           
-        }
+        return true;
      }
    }
 
