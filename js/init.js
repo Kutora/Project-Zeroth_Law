@@ -62,7 +62,7 @@ async function getData(url,prn)
    }
 
 
-function dataGrab(url)
+async function dataGrab(url)
 {
    var prn
    for(var i=0; i<pr.length;i++ )
@@ -78,7 +78,7 @@ function dataGrab(url)
    return pr[prn][2]
 }
 
-window.playerChara = dataGrab("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
+window.playerChara = await dataGrab("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
 //waitForData();
 function getDOM(elementQueried) {
 return document.querySelector(elementQueried);
