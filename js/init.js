@@ -27,10 +27,14 @@ async function getData(url,prn)
                   cache: 'default' }
        ).then(function(response)
            {
-               
-                pr[prn][1] = response.json();
-                return true;
-           })    
+                
+                
+                return response.json();
+           }).then(function(data)
+              {
+                 pr[prn][1] = data;
+                 return data;
+              });
        return true;
    }
 
