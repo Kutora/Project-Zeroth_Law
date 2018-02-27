@@ -32,8 +32,8 @@ async function getData(url,prn)
                 return response.json();
            }).then(function(data)
               {
-                 pr[prn][1] = data;
-                 return data;
+                 pr[prn][1] = Promise.resolve(data);
+                 return Promise.resolve(data);
               });
        return true;
    }
