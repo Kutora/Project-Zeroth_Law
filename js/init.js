@@ -1,18 +1,3 @@
-
-/*function httpRequest(address) 
-{
-   var req = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-   responseArray[assignmentName] = null;
-   req.onreadystatechange = function () { 
-       console.log(this.readyState);
-       if (this.readyState == 4)
-       {
-           return this.responseText;
-       }
-   };
-   req.open("GET",address, true);
-   req.send();
-}*/
 var pr =[ [null,null], [null,null], [null,null], [null,null], [null,null] ];
 window.passer = false;
 window.playerChara = undefined;
@@ -20,7 +5,7 @@ window.playerChara = undefined;
 
 function waitForData(prn)
    {
-     if(pr[prn][2] == null || pr[prn][2] ==false)
+     if(pr[prn][1] == null || pr[prn][1] ==false)
      {
         setTimeout(function(){waitForData(prn);}, 10000);
         
@@ -42,11 +27,9 @@ async function getData(url,prn)
                   cache: 'default' }
        ).then(function(response)
            {
-               return response.json();
-           }).then(function(data)
-           {
-               pr[prn][2] = data;
-           });       
+               return true;
+                pr[prn][1] = response.json();
+           })    
        return true;
    }
 
@@ -56,7 +39,7 @@ async function dataGrab(url)
    var prn
    for(var i=0; i<pr.length;i++ )
    {
-      if(pr[i][1] == null)
+      if(pr[i][0] == null)
       {
          prn = i;
          break;
@@ -64,7 +47,7 @@ async function dataGrab(url)
    }
    getData(url,prn)
    waitForData(prn);
-   return pr[prn][2]
+   return pr[prn][1]
 }
 
 window.playerChara = dataGrab("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
