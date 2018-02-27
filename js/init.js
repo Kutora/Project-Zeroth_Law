@@ -27,8 +27,9 @@ async function getData(url,prn)
                   cache: 'default' }
        ).then(function(response)
            {
-               return true;
+               
                 pr[prn][1] = response.json();
+                return true;
            })    
        return true;
    }
