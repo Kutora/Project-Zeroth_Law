@@ -20,7 +20,7 @@ function waitForData(prn)
 async function getData(url,prn) 
    {
 
-       pr[prn][1] = await fetch(url, 
+       pr[prn][0] = await fetch(url, 
                 { method: 'GET',
                   headers: {"Content-Type": "text/plain"},
                   mode: 'cors',
