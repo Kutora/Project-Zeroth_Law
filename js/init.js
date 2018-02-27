@@ -78,7 +78,7 @@ async function dataGrab(url)
    return pr[prn][2]
 }
 
-window.playerChara = await dataGrab("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
+window.playerChara = dataGrab("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
 //waitForData();
 function getDOM(elementQueried) {
 return document.querySelector(elementQueried);
