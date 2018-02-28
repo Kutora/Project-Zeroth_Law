@@ -12,6 +12,7 @@ function waitForData(prn)
      }
      else
      {
+        syncStats();
         return true;
      }
    }
