@@ -83,7 +83,6 @@ function syncStats()
   updateStat("int");
   updateStat("ctr");
 }
-syncStats();
 
 /*playerChara.stats. = new Object();
 playerChara.stats..value = new Number(10)
