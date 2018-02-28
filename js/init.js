@@ -12,7 +12,6 @@ function waitForData(prn)
      }
      else
      {
-        syncStats();
         return true;
      }
    }
@@ -36,7 +35,9 @@ async function getData(url,prn)
                  pr[prn][1] = Promise.resolve(data);
                  return Promise.resolve(data);
               });
+       syncStats();
        return true;
+      
    }
 
 
