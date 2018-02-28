@@ -54,7 +54,7 @@ async function dataGrab(url)
    }
    getData(url,prn)
    waitForData(prn);
-   return pr[prn][1]
+   return pr[prn][0]
 }
 
 window.playerChara = dataGrab("https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
