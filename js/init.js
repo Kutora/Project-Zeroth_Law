@@ -1,7 +1,7 @@
 var pr =[ [null,null], [null,null], [null,null], [null,null], [null,null] ];
 var passer = false;
 var playerChara = undefined;
-async function getData(toBeSet,url,prn) 
+async function getData(toBeSet,url,prn,funcToBeCalled) 
    {
 
        pr[prn][0] = await fetch(url, 
@@ -20,13 +20,14 @@ async function getData(toBeSet,url,prn)
                  return Promise.resolve(data);
               });
        
-       window[toBeSet] = pr[0][0]
+       window[toBeSet] = pr[0][0];
+       window[funcToBeCalled]();
        return true;
       
    }
 
 
-async function dataGrab(toBeSet,url)
+async function dataGrab(toBeSet,funcToBeCalled,url)
 {
    var prn
    for(var i=0; i<pr.length;i++ )
@@ -37,7 +38,7 @@ async function dataGrab(toBeSet,url)
          break;
       }
    }
-   getData(toBeSet,url,prn);
+   getData(toBeSet,url,prn,funcToBeCalled);
    return pr[prn][0];
 }
 dataGrab("playerChara","https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
