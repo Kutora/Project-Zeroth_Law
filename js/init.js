@@ -41,7 +41,7 @@ async function dataGrab(toBeSet,funcToBeCalled,url)
    getData(toBeSet,url,prn,funcToBeCalled);
    return pr[prn][0];
 }
-dataGrab("playerChara","https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
+dataGrab("playerChara","syncStats","https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
 //waitForData();
 function getDOM(elementQueried) {
 return document.querySelector(elementQueried);
