@@ -20,7 +20,7 @@ async function getData(toBeSet,url,prn,funcToBeCalled)
                  return Promise.resolve(data);
               });
        
-       window[toBeSet] = pr[0][0];
+       window[toBeSet] = pr[prn][0];
        window[funcToBeCalled]();
        return true;
       
