@@ -62,8 +62,35 @@
     "engine":[
       {
         "name":"EM Drive Array",
-        "type":"Thruster",
+        "type":"Thrust",
         "typeid":1
+      },
+      {
+        "name":"Oxyegen Breathing Engine",
+        "type":"Thrust",
+        "typeid":1
+      },
+      {
+        "name":"Ion Engine",
+        "type":"Thrust",
+        "typeid":1
+      },
+      {
+        "name":"Jump (Flick) Drive",
+        "type":"FTL_D",
+        "typeid":2
+      },
+      {
+        "name":"4D7L Accelerator",
+        "type":"FTL_D",
+        "typeid":2
+      }
+    ],
+    "crewCapacity":2,
+    "weapons":
+    [
+      {
+        
       }
     ]
   }
