@@ -90,7 +90,14 @@
     "weapons":
     [
       {
-        
+        "name":"Multi-Frequency AZER",
+        "type":"XAZER",
+        "typeid":2
+      },
+      {
+        "name":"Gauss Cannon",
+        "type":"Kinetic",
+        "typeid":1
       }
     ]
   }
