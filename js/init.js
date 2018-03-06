@@ -80,11 +80,10 @@ playerChara.stats..minValue = new Number(1)
 function concatDisplayText()
 {
   ccDisTxt = '';
-  for(i = 0;i < scene.display.displayedText.length;i++)
+  for(i = 0;i < scene.display.displayedText.length-1;i++)
     {
       if(scene.display.displayedText[i][0] == '$'&& scene.display.displayedText[i][1] == '{'&& scene.display.displayedText[i][scene.display.displayedText[i].length-1] == '}' )
       {
-        var i = i
         var toBeEvaluated = '';
         for(j=0;j < scene.display.displayedText[i].length -4; i++)
         {
