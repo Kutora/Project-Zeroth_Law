@@ -82,7 +82,7 @@ function concatDisplayText()
   ccDisTxt = '';
   for(i = 0;i < scene.display.displayedText.length;i++)
     {
-      if(scene.display.displayedText[i][0] == '$'&& scene.display.displayedText[i][1] == '{')
+      if(scene.display.displayedText[i][0] == '$'&& scene.display.displayedText[i][1] == '{'&& scene.display.displayedText[i][scene.display.displayedText[i].length-1] == '}' )
       ccDisTxt = ccDisTxt.concat(scene.display.displayedText[i]);
     }
   return ccDisTxt;
