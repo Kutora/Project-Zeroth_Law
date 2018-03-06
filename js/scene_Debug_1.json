@@ -1,0 +1,52 @@
+{
+   "doc":"the object for all things scene",
+   "display":{
+      "displayedText":[
+         "doc: put the list of text and string returning functions to create the text<br/>Example: <br/>${playerChara.name}",
+         "",
+         " is cornered at a ledge, the beast is leering; you must do something!<br/><br/>"
+      ],
+      "isInDebug":false
+   },
+   "buttons":{
+      "usable":[
+         false,
+         true,
+         true,
+         true,
+         false,
+         true,
+         false,
+         false,
+         false,
+         false,
+         false
+      ],
+      "text":[
+         "",
+         "Juke",
+         "Fight",
+         "Run?",
+         "Intmdte",
+         "Jump",
+         "Love",
+         "OutSmrt",
+         null,
+         null,
+         null
+      ],
+      "toolTip":[
+         "",
+         "Attempt to trick the beast",
+         "Fight the beast",
+         "Try to run",
+         "Use your sheer strength to intimidate the beast",
+         "Jump off the ledge",
+         "Uh...",
+         "Use your Intelligence to",
+         null,
+         null,
+         null
+      ]
+   }
+}
