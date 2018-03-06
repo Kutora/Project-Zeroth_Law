@@ -86,7 +86,7 @@ function concatDisplayText()
       {
         var i = i
         var toBeEvaluated = '';
-        for(j=0;j < scene.display.displayedText[i].length-4; i++)
+        for(j=0;j < scene.display.displayedText[i].length -4; i++)
         {
           toBeEvaluated[j]=scene.display.displayedText[i][j+3];
         }
