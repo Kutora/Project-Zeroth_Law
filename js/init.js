@@ -80,14 +80,14 @@ playerChara.stats..minValue = new Number(1)
 function concatDisplayText()
 {
   ccDisTxt = '';
-  for(i = 0;i < scene.display.displayedText.length-1;i++)
+  for(i = 0;i <= scene.display.displayedText.length;i++)
     {
       if(scene.display.displayedText[i][0] == '$'&& scene.display.displayedText[i][1] == '{'&& scene.display.displayedText[i][scene.display.displayedText[i].length-1] == '}' )
       {
         var toBeEvaluated = '';
-        for(j=0;j < scene.display.displayedText[i].length -4;j++)
+        for(j=0;j < scene.display.displayedText[i].length -3;j++)
         {
-          toBeEvaluated[j]=scene.display.displayedText[i][j+3];
+          toBeEvaluated[j]=scene.display.displayedText[i][j+2];
         }
         ccDisTxt = ccDisTxt.concat(eval(toBeEvaluated));
       }
