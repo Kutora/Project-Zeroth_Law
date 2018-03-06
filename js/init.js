@@ -83,7 +83,18 @@ function concatDisplayText()
   for(i = 0;i < scene.display.displayedText.length;i++)
     {
       if(scene.display.displayedText[i][0] == '$'&& scene.display.displayedText[i][1] == '{'&& scene.display.displayedText[i][scene.display.displayedText[i].length-1] == '}' )
-      ccDisTxt = ccDisTxt.concat(scene.display.displayedText[i]);
+      {
+        var toBeEvaluated = '';
+        for(j=0;j < scene.display.displayedText[i].length-4; i++)
+        {
+          toBeEvaluated[j]=scene.display.displayedText[i][j+3]
+        }
+        ccDisTxt = ccDisTxt.concat(eval(toBeEvaluated));
+      }
+      else
+      {
+        ccDisTxt = ccDisTxt.concat(scene.display.displayedText[i]);
+      }
     }
   return ccDisTxt;
 }
