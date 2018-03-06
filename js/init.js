@@ -1,6 +1,7 @@
 var pr =[ [null,null], [null,null], [null,null], [null,null], [null,null] ];
 var passer = false;
 var playerChara = undefined;
+var scene = undefined;
 async function getData(toBeSet,url,prn,funcToBeCalled) 
    {
 
@@ -42,6 +43,7 @@ async function dataGrab(toBeSet,funcToBeCalled,url)
    return pr[prn][0];
 }
 dataGrab("playerChara","syncStats","https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
+dataGrab("scene","updateScene","https://kutora.github.io/Project-Zeroth_Law/js/scene_Debug_1.json");
 //waitForData();
 function getDOM(elementQueried) {
 return document.querySelector(elementQueried);
@@ -86,55 +88,11 @@ function concatDisplayText()
 }
 
 
-scene = {};
 
-scene.doc = "the object for all things scene";
-scene.display = {};
-scene.display.displayedText = [];
-scene.display.displayedText[0] = "doc: put the list of text and string returning functions to create the text<br/>Example: <br/>${playerChara.name}";
-scene.display.displayedText[1] = '';
-scene.display.displayedText[2] = " is cornered at a ledge, the beast is leering; you must do something!<br/><br/>";
-scene.display.isInDebug = false;
-scene.buttons = {};
-scene.buttons.usable = [false];
-scene.buttons.text = [''];
-scene.buttons.toolTip = [''];
 
-scene.buttons.usable[1] = true;
-scene.buttons.usable[2] = true;
-scene.buttons.usable[3] = true;
-scene.buttons.usable[4] = false;
-scene.buttons.usable[5] = true;
-scene.buttons.usable[6] = false;
-scene.buttons.usable[7] = false;
-scene.buttons.usable[8] = false;
-scene.buttons.usable[9] = false;
-scene.buttons.usable[10] = false;
-
-scene.buttons.text[1] = 'Juke';
-scene.buttons.text[2] = 'Fight';
-scene.buttons.text[3] = 'Run?';
-scene.buttons.text[4] = 'Intmdte';
-scene.buttons.text[5] = 'Jump';
-scene.buttons.text[6] = 'Love';
-scene.buttons.text[7] = 'OutSmrt';
-scene.buttons.text[8] = null;//... = '';
-scene.buttons.text[9] = null;
-scene.buttons.text[10] = null;
-
-scene.buttons.toolTip[1] = "Attempt to trick the beast";
-scene.buttons.toolTip[2] = "Fight the beast";
-scene.buttons.toolTip[3] = "Try to run";
-scene.buttons.toolTip[4] = "Use your sheer strength to intimidate the beast";
-scene.buttons.toolTip[5] = "Jump off the ledge";
-scene.buttons.toolTip[6] = "Uh...";
-scene.buttons.toolTip[7] = "Use your Intelligence to";
-scene.buttons.toolTip[8] = null;//... = "";
-scene.buttons.toolTip[9] = null;
-scene.buttons.toolTip[10] = null;
-
-function updateBtns()
+function updateScene()
 {
+  document.getElementById("sceneDisplay").innerHTML = concatDisplayText();
   function btnAbler(btnNum, targetStr)
   {
     
@@ -220,9 +178,7 @@ function updateBtns()
 //title=""
 
 
-document.getElementById("sceneDisplay").innerHTML = concatDisplayText();
 
-updateBtns();
 window.addEventListener("keydown" , 
 function(event)
 {
