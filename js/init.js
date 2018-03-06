@@ -30,7 +30,7 @@ async function getData(toBeSet,url,prn,funcToBeCalled)
 
 async function dataGrab(toBeSet,funcToBeCalled,url)
 {
-   var prn
+   var prn;
    for(var i=0; i<pr.length;i++ )
    {
       if(pr[i][0] == null)
@@ -87,7 +87,7 @@ function concatDisplayText()
         var toBeEvaluated = '';
         for(j=0;j < scene.display.displayedText[i].length-4; i++)
         {
-          toBeEvaluated[j]=scene.display.displayedText[i][j+3]
+          toBeEvaluated[j]=scene.display.displayedText[i][j+3];
         }
         ccDisTxt = ccDisTxt.concat(eval(toBeEvaluated));
       }
