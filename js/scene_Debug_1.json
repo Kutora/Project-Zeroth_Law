@@ -3,7 +3,7 @@
    "display":{
       "displayedText":[
          "doc: put the list of text and string returning functions to create the text<br/>Example: <br/>",
-         "${if (playerChara){return playerChara.name} else{console.error(\"temp: retreval order error!\") return \"ERROR\"} }",
+         "${if (playerChara){return playerChara.name;} else{console.error(\"temp: retreval order error!\");return \"ERROR\";} }",
          " is cornered at a ledge, the beast is leering; you must do something!<br/><br/>"
       ],
       "isInDebug":false
