@@ -84,7 +84,7 @@ function concatDisplayText()
     {
       if(scene.display.displayedText[i][0] == '$'&& scene.display.displayedText[i][1] == '{'&& scene.display.displayedText[i][scene.display.displayedText[i].length-1] == '}' )
       {  
-        ccDisTxt = ccDisTxt.concat(eval(scene.display.displayedText[i].substr(2,scene.display.displayedText[i]-3)));
+        ccDisTxt = ccDisTxt.concat(eval(scene.display.displayedText[i].substr(2,scene.display.displayedText[i].length-3)));
       }
       else
       {
