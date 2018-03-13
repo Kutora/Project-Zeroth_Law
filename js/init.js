@@ -100,15 +100,59 @@ function concatDisplayText()
 function updateScene()
 {
   document.getElementById("sceneDisplay").innerHTML = concatDisplayText();
-  function btnAbler(btnNum, targetStr)
+ 
+    /*if (target.getNamedItem('disabled') !== null)
+      {
+        if (scene.buttons.usable[btnNum])
+          {
+            target.removeNamedItem('disabled');
+          }
+      }
+    else
+      {
+        if (!scene.buttons.usable[btnNum])
+          {
+            target.setNamedItem(document.createAttribute("disabled"));
+          }
+      }*/
+    
+  }
+  for(var i=0;i < 10;i++)
+    {
+    }
+}
+
+//title=""
+function updateAButton(btnNum)
+  {
+    var dom_elem = document.getElementById("btn" + ~~(btnNum/5 +1) + 'r' +  (btnNum%5 +1));
+    dom_elem.childNodes[0].innerHTML = scene.buttons.text[btnNum+1];
+    dom_elem.setAttribute('title', scene.buttons.toolTip[btnNum+1]);
+    //Add here to...
+    if (dom_elem.attributes.getNamedItem('onclick') === null)
+    {
+      dom_elem.attributes.setNamedItem(document.createAttribute("onclick"));
+    }
+    //here to Index.html, then remove these comments and the code between them
+    if ()
+        {
+        
+        }
+    else
+    {
+      if (!scene.buttons.usable[btnNum] && dom_elem.attributes.getNamedItem('disabled') === null))
+        {
+          dom_elem.attributes.setNamedItem(document.createAttribute("disabled"));
+          dom_elem.attributes.getNamedItem('onclick').value= "(function(){})();"
+
+        }
+    }
+  }
+
+function btnAbler(btnNum, targetStr)
   {
     
-    var target = document.getElementById(targetStr).attributes;
-    if (target.getNamedItem('onclick') === null)
-      {
-        target.setNamedItem(document.createAttribute("onclick"));
-      }
-    
+    var target = document.getElementById(targetStr).attributes;    
     if (scene.buttons.usable[btnNum])
       {
         target.getNamedItem('onclick').value = null;//place holder
@@ -130,69 +174,6 @@ function updateScene()
             
           }
       }
-    /*if (target.getNamedItem('disabled') !== null)
-      {
-        if (scene.buttons.usable[btnNum])
-          {
-            target.removeNamedItem('disabled');
-          }
-      }
-    else
-      {
-        if (!scene.buttons.usable[btnNum])
-          {
-            target.setNamedItem(document.createAttribute("disabled"));
-          }
-      }*/
-    
-  }
-  for(var i=0;i < 10;i++)
-    {
-      
-      if(i>5 )
-        {
-          if(i==10)
-            {
-              /*document.getElementById("btn2r5").childNodes[0].innerHTML = scene.buttons.text[10];
-              document.getElementById("btn2r5").setAttribute('title', scene.buttons.toolTip[10]);
-              btnAbler(i, "btn2r5");*/
-              var dom_elem = document.getElementById("btn" + ~~(i/5 +1) + 'r' +  (i%5 +1));
-              dom_elem.childNodes[0].innerHTML = scene.buttons.text[i];
-              dom_elem.setAttribute('title', scene.buttons.toolTip[i]);
-            }
-          else
-            {
-              document.getElementById("btn2r" + (i%5)).childNodes[0].innerHTML = scene.buttons.text[i];
-              document.getElementById("btn2r" + (i%5)).setAttribute('title', scene.buttons.toolTip[i]);
-              btnAbler(i, ("btn2r" + (i%5)));
-            }
-        }
-      else
-        {
-          if(i==5)
-            {
-              document.getElementById("btn1r5").childNodes[0].innerHTML = scene.buttons.text[5];
-              document.getElementById("btn1r5").setAttribute('title', scene.buttons.toolTip[5]);
-              btnAbler(i, "btn1r5");
-            }
-          else
-            {
-              document.getElementById("btn1r" + (i%5)).childNodes[0].innerHTML = scene.buttons.text[i];
-              document.getElementById("btn1r" + (i%5)).setAttribute('title', scene.buttons.toolTip[i]);
-              btnAbler(i, ("btn1r" + (i%5)));
-            }
-        }
-    }
-}
-
-//title=""
-function updateAButton()
-{
-   document.getElementById("btn1r" + (i%5)).childNodes[0].innerHTML = scene.buttons.text[i];
-   document.getElementById("btn1r" + (i%5)).setAttribute('title', scene.buttons.toolTip[i]);
-   btnAbler(i, ("btn1r" + (i%5)));
-}
-
 
 window.addEventListener("keydown" , 
 function(event)
