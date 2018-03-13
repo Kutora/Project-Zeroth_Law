@@ -146,16 +146,19 @@ function updateScene()
       }*/
     
   }
-  for(var i=1;i < 11;i++)
+  for(var i=0;i < 10;i++)
     {
       
       if(i>5 )
         {
           if(i==10)
             {
-              document.getElementById("btn2r5").childNodes[0].innerHTML = scene.buttons.text[10];
+              /*document.getElementById("btn2r5").childNodes[0].innerHTML = scene.buttons.text[10];
               document.getElementById("btn2r5").setAttribute('title', scene.buttons.toolTip[10]);
-              btnAbler(i, "btn2r5");
+              btnAbler(i, "btn2r5");*/
+              var dom_elem = document.getElementById("btn" + ~~(i/5 +1) + 'r' +  (i%5 +1));
+              dom_elem.childNodes[0].innerHTML = scene.buttons.text[i];
+              dom_elem.setAttribute('title', scene.buttons.toolTip[i]);
             }
           else
             {
@@ -183,7 +186,12 @@ function updateScene()
 }
 
 //title=""
-
+function updateAButton()
+{
+   document.getElementById("btn1r" + (i%5)).childNodes[0].innerHTML = scene.buttons.text[i];
+   document.getElementById("btn1r" + (i%5)).setAttribute('title', scene.buttons.toolTip[i]);
+   btnAbler(i, ("btn1r" + (i%5)));
+}
 
 
 window.addEventListener("keydown" , 
