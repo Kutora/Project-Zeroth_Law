@@ -88,7 +88,7 @@ function updateAButton(btnNum)
       }
     else
       {
-        if(dom_elem.attributes.getNamedItem('disabled') == null))
+        if(dom_elem.attributes.getNamedItem('disabled') == null)
           {
             dom_elem.attributes.setNamedItem(document.createAttribute("disabled"));
             dom_elem.attributes.getNamedItem('onclick').value = "(void function(){})();"
