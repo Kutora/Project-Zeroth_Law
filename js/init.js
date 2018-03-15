@@ -1,8 +1,7 @@
 var pr =[ [null,null], [null,null], [null,null], [null,null], [null,null] ];
-var passer = false;
 var playerChara = undefined;
 var scene = undefined;
-async function getData(toBeSet,url,prn,funcToBeCalled) 
+function getData(toBeSet,url,prn,funcToBeCalled) 
    {
        pr[prn][0] = await fetch(url, 
                 { method: 'GET',
@@ -23,7 +22,7 @@ async function getData(toBeSet,url,prn,funcToBeCalled)
        return true;
       
    }
-async function dataGrab(toBeSet,funcToBeCalled,url)
+function dataGrab(toBeSet,funcToBeCalled,url)
 {
    var prn;
    for(var i=0; i<pr.length;i++ )
@@ -53,8 +52,8 @@ function syncStats()
 }
 function concatDisplayText()
 {
-  ccDisTxt = '';
-  for(i = 0;i <= scene.display.displayedText.length -1;i++)
+  var ccDisTxt = '';
+  for(var i = 0;i <= scene.display.displayedText.length -1;i++)
     {
       if(scene.display.displayedText[i][0] == '$'&& scene.display.displayedText[i][1] == '{'&& scene.display.displayedText[i][scene.display.displayedText[i].length-1] == '}' )
       {  
@@ -91,10 +90,11 @@ function updateAButton(btnNum)
         if(dom_elem.attributes.getNamedItem('disabled') == null)
           {
             dom_elem.attributes.setNamedItem(document.createAttribute("disabled"));
-            dom_elem.attributes.getNamedItem('onclick').value = "(void function(){})();"
+            dom_elem.attributes.getNamedItem('onclick').value = "(void function(){})();";
 
           }
       }
+  }
 
 function updateScene()
   {
