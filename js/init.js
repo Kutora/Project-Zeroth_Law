@@ -1,5 +1,4 @@
 var pr =[ [null,null], [null,null], [null,null], [null,null], [null,null] ];
-var passer = false;
 var playerChara = undefined;
 var scene = undefined;
 async function getData(toBeSet,url,prn,funcToBeCalled) 
@@ -53,8 +52,8 @@ function syncStats()
 }
 function concatDisplayText()
 {
-  ccDisTxt = '';
-  for(i = 0;i <= scene.display.displayedText.length -1;i++)
+  var ccDisTxt = '';
+  for(var i = 0;i <= scene.display.displayedText.length -1;i++)
     {
       if(scene.display.displayedText[i][0] == '$'&& scene.display.displayedText[i][1] == '{'&& scene.display.displayedText[i][scene.display.displayedText[i].length-1] == '}' )
       {  
@@ -95,7 +94,7 @@ function updateAButton(btnNum)
 
           }
       }
-
+  }
 function updateScene()
   {
   document.getElementById("sceneDisplay").innerHTML = concatDisplayText();    
