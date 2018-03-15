@@ -37,7 +37,7 @@
       ],
       "functionality":[
          null,
-         null,
+         "dataGrab('scene','updateScene','https://kutora.github.io/Project-Zeroth_Law/js/scene_Debug_1.json');",//replace with JUKE scene data
          null,
          null,
          null,
