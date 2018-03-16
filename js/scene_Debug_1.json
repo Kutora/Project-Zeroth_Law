@@ -1,4 +1,6 @@
 {
+   "name":"Debug",
+   "id":0,
    "doc":"the object for all things scene",
    "display":{
       "displayedText":[
@@ -37,8 +39,8 @@
       ],
       "functionality":[
          null,
-         "dataGrab('scene','updateScene','https://kutora.github.io/Project-Zeroth_Law/js/scene_Debug_1.json');",//replace with JUKE scene data
-         null,
+         "dataGrab('scene','updateScene','https://kutora.github.io/Project-Zeroth_Law/js/scene_Debug_1_subJuke.json');",
+         "if(playerChara.stats.spd.effValue >= 75){gotAway(Camp(););}initFight(0, false)",
          null,
          null,
          null,
