@@ -24,8 +24,8 @@ async function getData(toBeSet,url,prn,funcToBeCalled)
    }
 async function dataGrab(toBeSet,funcToBeCalled,url)
 {
-   var prn;
-   for(var i=0; i<pr.length;i++ )
+   let prn;
+   for(let i=0; i<pr.length;i++ )
    {
       if(pr[i][0] == null)
       {
@@ -52,8 +52,7 @@ function syncStats()
 }
 function concatDisplayText()
 {
-  var ccDisTxt = '';
-  for(var i = 0;i <= scene.display.displayedText.length -1;i++)
+  for(let ccDisTxt = '', i = 0;i <= scene.display.displayedText.length -1;i++)
     {
       if(scene.display.displayedText[i][0] == '$'&& scene.display.displayedText[i][1] == '{'&& scene.display.displayedText[i][scene.display.displayedText[i].length-1] == '}' )
       {  
