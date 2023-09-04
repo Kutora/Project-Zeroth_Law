@@ -36,8 +36,8 @@ async function dataGrab(toBeSet,funcToBeCalled,url)
    getData(toBeSet,url,prn,funcToBeCalled);
    return pr[prn][0];
 }
-dataGrab("playerChara","syncStats","https://kutora.github.io/Project-Zeroth_Law/js/defaultPC_data.json");
-dataGrab("scene","updateScene","https://kutora.github.io/Project-Zeroth_Law/js/scene_Debug_1.json");
+dataGrab("playerChara","syncStats","./js/defaultPC_data.json");
+dataGrab("scene","updateScene","./js/scene_Debug_1.json");
 function updateStat(statAbbreviation)
 {
     document.getElementById(statAbbreviation + "Text").innerHTML = playerChara.stats[statAbbreviation].value;
@@ -52,7 +52,7 @@ function syncStats()
 }
 function concatDisplayText()
 {
-  for(let ccDisTxt = '', i = 0;i <= scene.display.displayedText.length -1;i++)
+  for(var ccDisTxt = '', i = 0;i <= scene.display.displayedText.length -1;i++)
     {
       if(scene.display.displayedText[i][0] == '$'&& scene.display.displayedText[i][1] == '{'&& scene.display.displayedText[i][scene.display.displayedText[i].length-1] == '}' )
       {  
